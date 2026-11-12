@@ -1,0 +1,4 @@
+Model: Pretrained ResNet18
+Images: Astronaut and Cat
+Embedding dimensions: 512
+Cosine similarity: 0.5303
