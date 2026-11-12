@@ -1,0 +1,6 @@
+# Versions jointly tested in the prepared environment. CPU or CUDA selection depends on your PyTorch install.
+torch==2.10.0
+torchvision==0.25.0
+numpy>=1.26,<3
+Pillow>=10,<13
+pytest>=8,<10

@@ -1,0 +1,46 @@
+{
+  "experiment": "Milestone 01: ResNet18 image feature extraction",
+  "date": "2026-11-12",
+  "status": "SMOKE TEST ONLY - RANDOM MODEL; NOT SCIENTIFIC EVIDENCE",
+  "weights": "random initialization (seed=42)",
+  "backbone": "resnet18, final fully connected classification head replaced with Identity",
+  "embedding_shape_single": [
+    512
+  ],
+  "preprocessing": "Official ResNet18 ImageNet-1K V1 weights transforms: resize 256, center crop 224, normalize",
+  "images": [
+    {
+      "path": "assets/astronaut.png",
+      "sha256": "e51090bfeb7d3f8562b9b5eef784a66003a023f54675083925727adbc072f2b6"
+    },
+    {
+      "path": "assets/chelsea.png",
+      "sha256": "d5358b6dce1701a0d0bb38451d99c38addb8e3178af4e52c51e9025e96048b43"
+    }
+  ],
+  "comparisons": {
+    "same_image_repeated_cosine": 0.9999999403953552,
+    "horizontally_flipped_cosine": 0.9967061877250671,
+    "different_image_cosine": 0.9938542246818542
+  },
+  "first_image_embedding_sample_first_8": [
+    0.9294841289520264,
+    1.8337293863296509,
+    0.22784005105495453,
+    0.35055550932884216,
+    2.700507879257202,
+    2.6164958477020264,
+    1.707162618637085,
+    0.5472272634506226
+  ],
+  "first_image_embedding_l2_norm": 30.914350509643555,
+  "deterministic_repeat_exact_equal": true,
+  "environment": {
+    "python_torch": "2.10.0+cpu",
+    "torchvision": "0.25.0+cpu",
+    "numpy": "2.3.5",
+    "device": "cpu",
+    "random_seed": 42
+  },
+  "interpretation": "Embeddings are computational features, NOT Nepali captions or a test of caption quality. Cosine similarities are descriptive for these specific example images only."
+}
